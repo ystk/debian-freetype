@@ -1,3 +1,31 @@
+freetype (2.4.2-2.1+squeeze4) stable-security; urgency=low
+
+  * CVE-2012-11[33|34|36|42|44]
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Wed, 07 Mar 2012 17:46:07 +0100
+
+freetype (2.4.2-2.1+squeeze3) stable-security; urgency=low
+
+  * Non-maintainer upload by the Security Team.
+  * Upload prepared by Michael Gilbert!
+  * Fix CVE-2011-3439: vulnerability in CID-keyed Type 1 fonts.	
+
+ -- Moritz Muehlenhoff <jmm@pisco>  Fri, 18 Nov 2011 20:24:48 +0000
+
+freetype (2.4.2-2.1+squeeze2) stable-security; urgency=low
+
+  * Non-maintainer upload by the Security Team
+  * CVE-2011-3256
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Mon, 24 Oct 2011 16:12:56 +0000
+
+freetype (2.4.2-2.1+squeeze1) stable-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * CVE-2011-0226: Vulnerability in parsing Type 1 fonts
+
+ -- Kan-Ru Chen <koster@debian.org>  Thu, 04 Aug 2011 00:24:59 +0800
+
 freetype (2.4.2-2.1) unstable; urgency=medium
 
   * Non-maintainer upload by the Security Team.

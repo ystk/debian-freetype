@@ -2,3 +2,7 @@ freetype-2.1.7-backwards.compat.patch -p0
 enable-subpixel-rendering.patch
 CVE-2010-3814.patch
 CVE-2010-3855.patch
+CVE-2011-0226.patch
+CVE-2011-3256.patch
+CVE-2011-3439.patch
+CVE-2012-1133_1134_1136_1142_1144.patch
