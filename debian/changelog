@@ -1,3 +1,122 @@
+freetype (2.4.9-1.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+    Upload ACKed by Steve Langasek <vorlon@debian.org> on #debian-devel.
+  * Add savannah-bug-37905.patch patch
+    [SECURITY] CVE-2012-5668: NULL Pointer Dereference in bdf_free_font.
+    (Closes: #696691)
+  * Add savannah-bug-37906.patch patch
+    [SECURITY] CVE-2012-5669: Out-of-bounds read in _bdf_parse_glyphs.
+    (Closes: #696691)
+  * Add savannah-bug-37907.patch patch
+    [SECURITY] CVE-2012-5670: Out-of-bounds write in _bdf_parse_glyphs.
+    (Closes: #696691)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 28 Dec 2012 21:32:28 +0100
+
+freetype (2.4.9-1) unstable; urgency=low
+
+  * New upstream release
+    - upstream fix for multiple vulnerabilities: CVE-2012-1126,
+      CVE-2012-1133, CVE-2012-1134, CVE-2012-1136, CVE-2012-1142,
+      CVE-2012-1144. and others.  Closes: #662864.
+    - update symbols file for a new symbol, ft_raccess_guess_table
+  * debian/patches-freetype/savannah-bug-35847.patch,
+    debian/patches-freetype/savannah-bug-35833.patch: pull two bugfixes from
+    upstream git on top of 2.4.9, to address regressions affecting
+    ghostscript.  Thanks to Till Kamppeter for pointing this out.
+  * push CPPFLAGS into CFLAGS for ft2demos, so our demos will be secure.
+    Closes: #663613.
+  * don't let a quiltrc override our QUILT_PATCHES settings in debian/rules.
+    Closes: #617217.
+  * Migrate debian/copyright to copyright-format 1.0, and fix up the upstream
+    URL.  Closes: #642059.
+
+ -- Steve Langasek <vorlon@debian.org>  Sat, 24 Mar 2012 23:35:16 +0000
+
+freetype (2.4.8-1) unstable; urgency=high
+
+  * New upstream release
+    - upstream fix for CVE-2011-3439.  Closes: #649122.
+    - adjust libfreetype6.symbols for a newly-exported function.
+
+ -- Steve Langasek <vorlon@debian.org>  Thu, 17 Nov 2011 22:28:14 +0000
+
+freetype (2.4.7-2) unstable; urgency=low
+
+  * Use dpkg-buildflags through debhelper.
+  * Don't set -Werror in CFLAGS on alpha or m68k, to work around a compiler
+    bug.  Closes: #646334.
+
+ -- Steve Langasek <vorlon@debian.org>  Mon, 24 Oct 2011 22:02:32 +0000
+
+freetype (2.4.7-1) unstable; urgency=low
+
+  * New upstream release
+    - upstream fix for CVE-2011-3256.  Closes: #646120.
+    - drop debian/patches-freetype/0001-Fix-Savannah-bug-33992.patch,
+      included upstream.
+  * Pass --without-bzip2 to configure, to avoid unwanted dependency on
+    libbz2.  Closes: #639638.
+  * Standards-Version 3.9.2.
+
+ -- Steve Langasek <vorlon@debian.org>  Sat, 22 Oct 2011 20:18:59 +0000
+
+freetype (2.4.6-2) unstable; urgency=low
+
+  * debian/patches-freetype/0001-Fix-Savannah-bug-33992.patch: [PATCH]
+    Fix Savannah bug #33992.  Thanks to David Bevan
+    <david.bevan@pb.com>.  Closes: #638348.
+
+ -- Steve Langasek <vorlon@debian.org>  Sat, 20 Aug 2011 06:30:18 +0000
+
+freetype (2.4.6-1) unstable; urgency=low
+
+  * New upstream release
+    - fixes CVE-2011-0226, a vulnerability in parsing of Type 1 fonts.
+      Closes: #635871.
+    - upstream now builds cleanly with -Werror and the new gcc-4.6 upstream
+      warnings.  Closes: #625328.
+
+ -- Steve Langasek <vorlon@debian.org>  Thu, 04 Aug 2011 05:49:09 +0000
+
+freetype (2.4.4-2) unstable; urgency=low
+
+  * Build for multiarch, using debhelper compat 9.
+  * Add Pre-Depends: ${misc:Pre-Depends} to pick up multiarch-support
+    dependency.
+
+ -- Steve Langasek <vorlon@debian.org>  Wed, 22 Jun 2011 14:38:12 -0700
+
+freetype (2.4.4-1) unstable; urgency=low
+
+  * Acknowledge security NMU - thanks, Moritz!
+  * New upstream release, closes: #606286, #600321
+    - fixes PDF rendering issues.  Closes: #612484, LP: #709229.
+    - fixes a rendering issue with 'S' glyphs in certain fonts.
+      LP: #654010.
+    - drop patches for CVE-2010-3855 and CVE-2010-3814, applied upstream.
+    - drop patch ft2demos-2.1.7-ftbench.patch; doesn't apply cleanly, the
+      code has changed significantly, patch never forwarded upstream.  If
+      this is still an issue, someone will provide a fixed patch.
+    - drop patch ft2demos-grkey.patch, fixed upstream.
+  * debian/patches-freetype/enable-gxvalid-otvalid.patch: enable the
+    otvalid and gxvalid table validation modules.  Thanks to Paul Wise
+    <pabs@debian.org>.  Closes: #520879, LP: #239626.
+  * debian/libfreetype6.symbols: update the symbols file for the same.
+  * debian/rules et al.: convert to dh 7
+  * drop INSTALL.* from the libfreetype6-dev docs.  Closes: #550971.
+  * move homepage out of debian/copyright and into debian/control.
+  * fix GPL link to point to GPL-2 explicitly.
+  * clean up long-obsolete conflicts/replaces.
+  * drop debian/README.quilt, redundant with debian/README.source.
+  * drop debian/README.Debian, which talks about the long-finished transition
+    from freetype1.
+  * strip dependency_libs out of /usr/lib/libfreetype.la.
+  * bump standards-version to 3.9.1.
+
+ -- Steve Langasek <vorlon@debian.org>  Mon, 21 Feb 2011 14:10:46 -0800
+
 freetype (2.4.2-2.1) unstable; urgency=medium
 
   * Non-maintainer upload by the Security Team.
