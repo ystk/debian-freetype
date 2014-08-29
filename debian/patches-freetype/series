@@ -1,8 +1,6 @@
 freetype-2.1.7-backwards.compat.patch -p0
 enable-subpixel-rendering.patch
 enable-gxvalid-otvalid.patch
-savannah-bug-35847.patch
-savannah-bug-35833.patch
-savannah-bug-37905.patch
-savannah-bug-37906.patch
-savannah-bug-37907.patch
+
+CVE-2014-2240.patch
+CVE-2014-2241.patch

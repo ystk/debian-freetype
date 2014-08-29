@@ -1,3 +1,60 @@
+freetype (2.5.2-1.1) unstable; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix two security issues in the CFF rasterizer (closes: #741299)
+    - CVE-2014-2240: out-of-bounds read/write in cf2hints.c.
+    - CVE-2014-2241: denial-of-service in cf2ft.c.
+
+ -- Michael Gilbert <mgilbert@debian.org>  Mon, 28 Jul 2014 02:56:08 +0000
+
+freetype (2.5.2-1) unstable; urgency=low
+
+  * New upstream release
+    - fixes a crasher bug with certain fonts.  Closes: #733052.
+    - drop of additional symbols which were previously exported but are only
+      meant for debugging and upstream recommends not enabling them when
+      building in "release mode".  If this impacts users of freetype, we can
+      re-enable these symbols later.
+  * Call autogen.sh on build to refresh autotools; not using dh-autoreconf
+    because the upstream directory structure is non-standard and it's a
+    throw-away dir, so there's no advantage to dh-autoreconf's rollback
+    support.
+  * Fix symbols file with respect to more complete version info found in
+    Ubuntu.
+  * Drop debian/patches-ft2demos/compiler-warning-fixes.patch, which is
+    actually a bug in the compiler_hardening_fixes.patch; fix it there
+    instead.
+  * Fix libpng detection when cross-building.
+
+ -- Steve Langasek <vorlon@debian.org>  Wed, 25 Dec 2013 09:06:22 +0000
+
+freetype (2.5.1-2) unstable; urgency=low
+
+  * Drop unnecessary GPLv2.txt from libfreetype6-dev.
+  * Add missing dependency on libpng-dev to libfreetype6-dev.
+    Closes: #732062.
+
+ -- Steve Langasek <vorlon@debian.org>  Tue, 17 Dec 2013 20:04:17 -0800
+
+freetype (2.5.1-1) unstable; urgency=low
+
+  * New upstream release.  Closes: #717952, #729231.
+    - Add build-dependency on libpng-dev.
+    - Dropped patches, included upstream: savannah-bug-35847.patch,
+      savannah-bug-35833.patch, savannah-bug-37905.patch,
+      savannah-bug-37906.patch, savannah-bug-37907.patch
+    - Internal symbols have been dropped in this version.  No soname change
+      because the symbols are not supposed to be used, but past experience
+      suggests that this may break some third-party software anyway.
+  * compiler_hardening_fixes.patch: fix wrong snprintf() calls in ttdebug.c
+    that cause an overflow 100% of the time.
+  * debian/patches-ft2demos/compiler-warning-fixes.patch: Fix a wrong
+    cast that triggers a compiler warning.
+  * debian/patches-ft2demos/revert-wrong-extern.patch: revert wrong
+    upstream commit that causes a build failure.
+
+ -- Steve Langasek <vorlon@debian.org>  Thu, 28 Nov 2013 07:05:47 +0000
+
 freetype (2.4.9-1.1) unstable; urgency=high
 
   * Non-maintainer upload.
