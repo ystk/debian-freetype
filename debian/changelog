@@ -1,3 +1,61 @@
+freetype (2.5.2-3) unstable; urgency=medium
+
+  * Fix Savannah bug #43535. CVE-2014-9675
+  * [bdf] Fix Savannah bug #41692. CVE-2014-9675-fixup-1
+  * src/base/ftobj.c (Mac_Read_POST_Resource): Additional overflow check
+    in the summation of POST fragment lengths. CVE-2014-0674-part-2
+  * src/base/ftobjs.c (Mac_Read_POST_Resource): Insert comments and fold
+    too long tracing messages. CVS-2014-9674-fixup-2
+  * src/base/ftobjs.c (Mac_Read_POST_Resource): Use unsigned long variables to read the lengths in POST fragments. CVE-2014-9674-fixup-1
+  * Fix Savannah bug #43538. CVE-2014-9674-part-1
+  * Fix Savannah bug #43539. CVE-2014-9673
+  * src/base/ftobjs.c (Mac_Read_POST_Resource): Avoid memory leak by
+    a broken POST table in resource-fork. CVE-2014-9673-fixup
+  * Fix Savannah bug #43540. CVE-2014-9672
+  * Fix Savannah bug #43547. CVE-2014-9671
+  * Fix Savannah bug #43548. CVE-2014-9670
+  * [sfnt] Fix Savannah bug #43588. CVE-2014-9669
+  * [sfnt] Fix Savannah bug #43589. CVE-2014-9668
+  * [sfnt] Fix Savannah bug #43590. CVE-2014-9667
+  * [sfnt] Fix Savannah bug #43591. CVE-2014-9666
+  * Change some fields in `FT_Bitmap' to unsigned type. CVE-2014-9665
+  * Fix uninitialized variable warning. CVE-2014-9665-fixup-2
+  * Make `FT_Bitmap_Convert' correctly handle negative `pitch' values.
+    CVE-2014-9665-fixup
+  * [type1, type42] Fix Savannah bug #43655. CVE-2014-9664
+  * [sfnt] Fix Savannah bug #43656. CVE-2014-9663
+  * [cff] Fix Savannah bug #43658. CVE-2014-9662
+  * [type42] Allow only embedded TrueType fonts. CVE-2014-9661
+  * [bdf] Fix Savannah bug #43660. CVE-2014-9660
+  * [cff] Fix Savannah bug #43661. CVE-2014-9659
+  * [sfnt] Fix Savannah bug #43672. CVE-2014-9658
+  * [truetype] Fix Savannah bug #43679. CVE-2014-9657
+  * [sfnt] Fix Savannah bug #43680. CVE-2014-9656
+  * All CVEs patched. Closes: #777656.
+
+ -- Keith Packard <keithp@keithp.com>  Mon, 23 Feb 2015 22:04:36 -0800
+
+freetype (2.5.2-2) unstable; urgency=medium
+
+  * Acknowledge security NMU; thanks to Michael Gilbert.
+  * Standards-Version 3.9.6.
+  * Bump debhelper build-dependency to 9.
+  * debian/patches/enable-old-cff.patch: disable the new CFF hinter from
+    Adobe, working around wrong hinting with some toolkits on Linux.  Thanks
+    to Samat K Jain <samat@samat.org> for preparing the patch.
+    Closes: #730742.
+  * debian/patches-freetype/0001-Fix-Savannah-bug-40997.patch: Cherry-pick
+    upstream patch to fix a double free.  Closes: #747002, LP: #1310728.
+  * debian/patches-freetype/0002-Fix-Savannah-bug-42418.patch: Cherry-pick
+    upstream patch to fix cjk font rendering issue.  LP: #1310017.
+  * debian/patches-freetype/verbose-libtool.patch: don't let libtool
+    suppress compiler output.
+  * debian/patches-freetype/no-uninitialized-bbox.patch: ensure that our
+    variable is reliably initialized before use, fixing a build failure on
+    ppc64el when building with -O3.
+
+ -- Steve Langasek <vorlon@debian.org>  Fri, 19 Sep 2014 06:27:10 +0000
+
 freetype (2.5.2-1.1) unstable; urgency=high
 
   * Non-maintainer upload by the Security Team.
