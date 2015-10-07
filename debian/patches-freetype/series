@@ -35,3 +35,5 @@ verbose-libtool.patch
 0027-src-base-ftobj.c-Mac_Read_POST_Resource-Additional-C.patch
 0028-bdf-Fix-Savannah-bug-41692.-CVE-2014-9675-fixup-1.patch
 0029-Fix-Savannah-bug-43535.-CVE-2014-9675.patch
+0030-savannah-bug-41309.patch
+0031-savannah-bug-41590.patch

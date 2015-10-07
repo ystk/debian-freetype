@@ -1,3 +1,13 @@
+freetype (2.5.2-3+deb8u1) jessie-security; urgency=high
+
+  * Non-maintainer upload.
+  * CVE-2014-9745: Fix Savannah bug #41590. Protect against invalid number in
+    t1load.c parse_encoding().
+  * CVE-2014-9746, CVE-2014-9747: Fix Savannah bug #41309. Correct use of
+    uninitialized data in t1load.c, cidload.c, t42parse.c and psobjs.c.
+
+ -- Santiago Ruano Rincón <santiagorr@riseup.net>  Mon, 05 Oct 2015 11:35:21 +0200
+
 freetype (2.5.2-3) unstable; urgency=medium
 
   * Fix Savannah bug #43535. CVE-2014-9675
