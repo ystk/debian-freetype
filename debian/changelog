@@ -1,3 +1,49 @@
+freetype (2.4.2-2.1+squeeze6) squeeze-lts; urgency=medium
+
+  * Non-maintainer upload by the Squeeze LTS Team.
+  * CVE-2014-9745: Fix Savannah bug #41590. Protect against invalid number in
+    t1load.c parse_encoding().
+  * CVE-2014-9746, CVE-2014-9747: Fix Savannah bug #41309. Correct use of
+    uninitialized data in t1load.c, cidload.c, t42parse.c and psobjs.c.
+
+ -- Santiago Ruano Rincón <santiagorr@riseup.net>  Mon, 28 Sep 2015 14:24:06 -0300
+
+freetype (2.4.2-2.1+squeeze5) squeeze-lts; urgency=medium
+
+  * Non-maintainer upload by the Squeeze LTS team
+  * Fix recent applicable CVEs (Closes: #777656):
+    - [sfnt] Fix Savannah bug #43680. CVE-2014-9656
+    - [truetype] Fix Savannah bug #43679. CVE-2014-9657
+    - [sfnt] Fix Savannah bug #43672. CVE-2014-9658
+    - [bdf] Fix Savannah bug #43660. CVE-2014-9660
+    - [type42] Allow only embedded TrueType fonts. CVE-2014-9661
+    - [sfnt] Fix Savannah bug #43656. CVE-2014-9663
+    - [type1, type42] Fix Savannah bug #43655. CVE-2014-9664
+    - Change some fields in `FT_Bitmap' to unsigned type. CVE-2014-9665
+    - Make `FT_Bitmap_Convert' correctly handle negative `pitch' values.
+      CVE-2014-9665-fixup
+    - Fix uninitialized variable warning. CVE-2014-9665-fixup-2
+    - [sfnt] Fix Savannah bug #43591. CVE-2014-9666
+    - [sfnt] Fix Savannah bug #43590. CVE-2014-9667
+    - [sfnt] Fix Savannah bug #43588. CVE-2014-9669
+    - Fix Savannah bug #43548. CVE-2014-9670
+    - Fix Savannah bug #43547. CVE-2014-9671
+    - Fix Savannah bug #43540. CVE-2014-9672
+    - Fix Savannah bug #43539. CVE-2014-9673
+    - src/base/ftobjs.c (Mac_Read_POST_Resource): Avoid memory leak by
+      a broken POST table in resource-fork. CVE-2014-9673-fixup
+    - Fix Savannah bug #43538. CVE-2014-9674-part-1
+    - src/base/ftobj.c (Mac_Read_POST_Resource): Additional overflow check
+      in the summation of POST fragment lengths. CVE-2014-9674-part-2
+    - src/base/ftobjs.c (Mac_Read_POST_Resource): Use unsigned long variables
+      to read the lengths in POST fragments. CVE-2014-9674-fixup-1
+    - src/base/ftobjs.c (Mac_Read_POST_Resource): Insert comments and fold
+      too long tracing messages. CVS-2014-9674-fixup-2
+    - Fix Savannah bug #43535. CVE-2014-9675
+    - [bdf] Fix Savannah bug #41692. CVE-2014-9675-fixup-1
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 31 Mar 2015 01:03:33 +0100
+
 freetype (2.4.2-2.1+squeeze4) stable-security; urgency=low
 
   * CVE-2012-11[33|34|36|42|44]

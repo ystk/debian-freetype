@@ -1,0 +1,25 @@
+From dfb475ab7a9e038875c6e11a7e3ee0acce40ef93 Mon Sep 17 00:00:00 2001
+From: Werner Lemberg <wl@gnu.org>
+Date: Mon, 14 Nov 2011 20:29:13 +0100
+Subject: [PATCH] Fix compiler warning.
+
+(cherry picked from commit dfb475ab7a9e038875c6e11a7e3ee0acce40ef93)
+---
+ src/base/ftbitmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/base/ftbitmap.c b/src/base/ftbitmap.c
+index 5ef7ac7..15c9d65 100644
+--- a/src/base/ftbitmap.c
++++ b/src/base/ftbitmap.c
+@@ -417,8 +417,8 @@
+ 
+         target->pitch = source->width + pad;
+ 
+-        if ( target->pitch > 0                           &&
+-             target->rows > FT_ULONG_MAX / target->pitch )
++        if ( target->pitch > 0                                     &&
++             (FT_ULong)target->rows > FT_ULONG_MAX / target->pitch )
+           return FT_Err_Invalid_Argument;
+ 
+         if ( target->rows * target->pitch > old_size             &&
