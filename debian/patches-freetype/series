@@ -40,3 +40,4 @@ verbose-libtool.patch
 0032_CVE-2016-10244.patch
 0033-CVE-2017-8105-psaux-Better-protect-flex-handling.patch
 0034-CVE-2017-8287-src-psaux-psobjs.c-t1_builder_close_contour-Add-safe.patch
+0035-CVE-2015-9290.patch

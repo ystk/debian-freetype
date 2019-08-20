@@ -1,3 +1,13 @@
+freetype (2.5.2-3+deb8u3) jessie-security; urgency=high
+
+  * Non-maintainer upload by the ELTS team.
+  * CVE-2015-9290
+    Fix potential buffer overflow. src/type1/t1parse.c
+    (T1_Get_Private_Dict): Assure `cur' doesn't point to end of file
+    buffer.
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Thu, 15 Aug 2019 19:25:24 +0200
+
 freetype (2.5.2-3+deb8u2) jessie-security; urgency=high
 
   * Non-maintainer upload by the Security Team.
