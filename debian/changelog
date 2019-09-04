@@ -1,3 +1,18 @@
+freetype (2.5.2-3+deb8u4) jessie-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * CVE-2015-9381: FreeType before 2.6.1 has a heap-based buffer
+    over-read in T1_Get_Private_Dict in type1/t1parse.c.
+  * CVE-2015-9382: FreeType before 2.6.1 has a buffer over-read in
+    skip_comment in psaux/psobjs.c because ps_parser_skip_PS_token is
+    mishandled in an FT_New_Memory_Face operation.
+  * CVE-2015-9383: FreeType before 2.6.2 has a heap-based buffer
+    over-read in tt_cmap14_validate in sfnt/ttcmap.c.
+  * Remove spurious quilt .pc/ directory from debian diff
+    (introduced in 2.5.2-2)
+
+ -- Sylvain Beucler <beuc@debian.org>  Wed, 04 Sep 2019 11:48:40 +0200
+
 freetype (2.5.2-3+deb8u3) jessie-security; urgency=high
 
   * Non-maintainer upload by the ELTS team.
