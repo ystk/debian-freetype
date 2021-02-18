@@ -1,3 +1,11 @@
+freetype (2.5.2-3+deb8u5) jessie-security; urgency=high
+
+  * Non-maintainer upload by the ELTS Team.
+  * CVE-2020-15999
+    Fix heap buffer overflow.
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 23 Oct 2020 19:03:02 +0200
+
 freetype (2.5.2-3+deb8u4) jessie-security; urgency=high
 
   * Non-maintainer upload by the LTS team.
